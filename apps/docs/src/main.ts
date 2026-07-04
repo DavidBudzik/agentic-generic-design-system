@@ -170,6 +170,79 @@ document.addEventListener('keydown', (e) => {
 (window as any).__toggleThemeMenu = toggleThemeMenu;
 (window as any).__filterThemes = filterThemes;
 
+// Pre-compute Design Tokens section HTML
+const colorTokens = [
+  { name: '--gds-color-bg', value: 'var(--gds-color-bg)' },
+  { name: '--gds-color-surface', value: 'var(--gds-color-surface)' },
+  { name: '--gds-color-bg-muted', value: 'var(--gds-color-bg-muted)' },
+  { name: '--gds-color-border', value: 'var(--gds-color-border)' },
+  { name: '--gds-color-text', value: 'var(--gds-color-text)' },
+  { name: '--gds-color-text-muted', value: 'var(--gds-color-text-muted)' },
+  { name: '--gds-color-primary', value: 'var(--gds-color-primary)' },
+  { name: '--gds-color-secondary', value: 'var(--gds-color-secondary)' },
+  { name: '--gds-color-accent', value: 'var(--gds-color-accent)' },
+  { name: '--gds-color-success', value: 'var(--gds-color-success)' },
+  { name: '--gds-color-warning', value: 'var(--gds-color-warning)' },
+  { name: '--gds-color-danger', value: 'var(--gds-color-danger)' },
+  { name: '--gds-color-info', value: 'var(--gds-color-info)' },
+  { name: '--gds-color-focus-ring', value: 'var(--gds-color-focus-ring)' },
+];
+const colorSwatchesHtml = colorTokens.map(t =>
+  '<div style="border: 1px solid var(--gds-color-border); border-radius: 10px; overflow: hidden;">' +
+  '<div style="height: 60px; background: ' + t.value + '; border-bottom: 1px solid var(--gds-color-border);"></div>' +
+  '<div style="padding: 8px 10px;"><div style="font-family: var(--gds-font-mono); font-size: 0.75rem; color: var(--gds-color-text);">' + t.name + '</div></div>' +
+  '</div>'
+).join('');
+
+const spacingHtml = [0,1,2,3,4,5,6,8,10,12,16].map(s =>
+  '<div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">' +
+  '<div style="width: 70px; font-family: var(--gds-font-mono); font-size: 0.75rem; color: var(--gds-color-text-muted);">--gds-space-' + s + '</div>' +
+  '<div style="height: 20px; background: var(--gds-color-primary); border-radius: 4px; width: var(--gds-space-' + s + '); min-width: var(--gds-space-' + s + ');"></div>' +
+  '<span style="font-size: 0.75rem; color: var(--gds-color-text-subtle);">' + (s === 0 ? '0' : (s * 0.25) + 'rem (' + (s * 4) + 'px)') + '</span>' +
+  '</div>'
+).join('');
+
+const radiusHtml = [
+  { name: 'sm', val: '4px' }, { name: 'md', val: '8px' },
+  { name: 'lg', val: '12px' }, { name: 'xl', val: '16px' }, { name: 'full', val: '9999px' }
+].map(r =>
+  '<div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">' +
+  '<div style="width: 56px; height: 56px; background: var(--gds-color-primary); border-radius: var(--gds-radius-' + r.name + ');"></div>' +
+  '<span style="font-family: var(--gds-font-mono); font-size: 0.75rem; color: var(--gds-color-text-muted);">--gds-radius-' + r.name + '</span>' +
+  '<span style="font-size: 0.6875rem; color: var(--gds-color-text-subtle);">' + r.val + '</span>' +
+  '</div>'
+).join('');
+
+const fontSizeHtml = ['xs','sm','md','lg','xl','2xl'].map(s =>
+  '<div style="text-align: center;"><div style="font-size: var(--gds-font-size-' + s + '); font-weight: 700; line-height: 1;">Aa</div>' +
+  '<div style="font-family: var(--gds-font-mono); font-size: 0.625rem; color: var(--gds-color-text-subtle); margin-top: 4px;">' + s + '</div></div>'
+).join('');
+
+const fontWeightHtml = [
+  { w: 'normal', v: 400 }, { w: 'medium', v: 500 }, { w: 'semibold', v: 600 }, { w: 'bold', v: 700 }
+].map(f =>
+  '<div style="text-align: center;"><div style="font-size: 1.125rem; font-weight: ' + f.v + ';">Aa</div>' +
+  '<div style="font-family: var(--gds-font-mono); font-size: 0.625rem; color: var(--gds-color-text-subtle); margin-top: 4px;">' + f.w + '</div></div>'
+).join('');
+
+const elevationHtml = ['sm','md','lg','xl'].map(s =>
+  '<div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">' +
+  '<div style="width: 80px; height: 80px; background: var(--gds-color-bg-elevated); border-radius: 12px; box-shadow: var(--gds-shadow-' + s + ');"></div>' +
+  '<span style="font-family: var(--gds-font-mono); font-size: 0.75rem; color: var(--gds-color-text-muted);">--gds-shadow-' + s + '</span>' +
+  '</div>'
+).join('');
+
+// Pre-compute Themes section HTML
+const themeCardsHtml = themeMeta.map(t =>
+  '<div onclick="window.__switchTheme(\'' + t.key + '\')" style="border: 1px solid var(--gds-color-border); border-radius: 10px; padding: 14px; cursor: pointer; transition: all 150ms cubic-bezier(0.4,0,0.2,1); display: flex; flex-direction: column; gap: 8px;" onmouseover="this.style.borderColor=\'var(--gds-color-border-strong)\'; this.style.transform=\'translateY(-2px)\'" onmouseout="this.style.borderColor=\'var(--gds-color-border)\'; this.style.transform=\'\'">' +
+  '<div style="display: flex; align-items: center; gap: 8px;">' +
+  '<span style="width: 14px; height: 14px; border-radius: 50%; background: ' + t.color + '; border: 1px solid rgba(0,0,0,0.1); flex-shrink: 0;"></span>' +
+  '<span style="font-size: 0.875rem; font-weight: 500; color: var(--gds-color-text);">' + t.label + '</span>' +
+  '</div>' +
+  '<span style="font-size: 0.6875rem; color: var(--gds-color-text-subtle); text-transform: uppercase; letter-spacing: 0.04em;">' + (t.group === 'Core' ? 'Light/Dark' : 'Brand') + '</span>' +
+  '</div>'
+).join('');
+
 const app = document.getElementById('app')!;
 app.innerHTML = `
  <div class="theme-switcher">
@@ -217,6 +290,48 @@ app.innerHTML = `
    <section id="getting-started" class="docs-section">
     <h2>Getting Started</h2>
     <div class="docs-code"><code>npm install @gds/core @gds/theme-neutral</code></div>
+   </section>
+
+   <section id="tokens" class="docs-section">
+    <h2>Design Tokens</h2>
+    <p style="color: var(--gds-color-text-muted); font-size: 1rem; margin-bottom: 24px;">All visual properties are driven by CSS custom properties. Override any token on :root to retheme instantly.</p>
+
+    <h3>COLOR</h3>
+    <div class="docs-demo" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px;">
+     ${colorSwatchesHtml}
+    </div>
+
+    <h3>SPACING</h3>
+    <div class="docs-demo" style="flex-direction: column; align-items: stretch;">
+     ${spacingHtml}
+    </div>
+
+    <h3>RADIUS</h3>
+    <div class="docs-demo">
+     ${radiusHtml}
+    </div>
+
+    <h3>TYPOGRAPHY</h3>
+    <div class="docs-demo" style="flex-direction: column; align-items: flex-start; gap: 16px; padding: 32px;">
+     <div><div style="font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gds-color-text-subtle); margin-bottom: 4px;">--gds-font-sans</div><div style="font-size: 1.25rem; font-family: var(--gds-font-sans);">The quick brown fox</div></div>
+     <div><div style="font-size: 0.6875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gds-color-text-subtle); margin-bottom: 4px;">--gds-font-mono</div><div style="font-size: 1.25rem; font-family: var(--gds-font-mono);">const x = 42;</div></div>
+     <div style="display: flex; gap: 24px; flex-wrap: wrap;">${fontSizeHtml}</div>
+     <div style="display: flex; gap: 24px; flex-wrap: wrap;">${fontWeightHtml}</div>
+    </div>
+
+    <h3>ELEVATION</h3>
+    <div class="docs-demo" style="gap: 32px; background: var(--gds-color-bg-muted);">
+     ${elevationHtml}
+    </div>
+   </section>
+
+   <section id="themes" class="docs-section">
+    <h2>Themes</h2>
+    <p style="color: var(--gds-color-text-muted); font-size: 1rem; margin-bottom: 24px;">19 themes available. Switch using the dropdown in the top-right corner. Each theme overrides all CSS custom properties.</p>
+
+    <div class="docs-demo" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 12px;">
+     ${themeCardsHtml}
+    </div>
    </section>
 
    <section id="action" class="docs-section">
