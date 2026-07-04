@@ -212,7 +212,7 @@ app.innerHTML = `
 
   <main class="docs-main">
    <h1>Generic Design System</h1>
-   <p>An open source design system built on Lit Web Components. Fully customizable, framework-agnostic, and agent-ready. <span style="color: var(--gds-color-primary); font-weight: 600;">19 themes.</span> 73 components.</p>
+   <p>An open source design system built on Lit Web Components. Fully customizable, framework-agnostic, and agent-ready. <span style="color: var(--gds-color-primary); font-weight: 600;">19 themes.</span> 106 components.</p>
 
    <section id="getting-started" class="docs-section">
     <h2>Getting Started</h2>
