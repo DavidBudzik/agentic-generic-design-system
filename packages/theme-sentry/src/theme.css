@@ -1,0 +1,114 @@
+/* GDS Theme: Sentry
+  Dark purple-tinted bg, purple accents, technical/monitoring aesthetic.
+  Based on Sentry's design system. */
+
+:root {
+ /* Background */
+ --gds-color-bg: #1f1633;
+ --gds-color-bg-elevated: #2a1f47;
+ --gds-color-bg-muted: #150f23;
+
+ /* Surface */
+ --gds-color-surface: #1f1633;
+ --gds-color-surface-hover: #2a1f47;
+
+ /* Border */
+ --gds-color-border: #362d59;
+ --gds-color-border-strong: #584674;
+
+ /* Text */
+ --gds-color-text: #ffffff;
+ --gds-color-text-muted: #e5e7eb;
+ --gds-color-text-subtle: #79628c;
+ --gds-color-text-inverse: #1f1633;
+
+ /* Primary */
+ --gds-color-primary: #79628c;
+ --gds-color-primary-hover: #6a5fc1;
+ --gds-color-primary-active: #6a5fc1;
+
+ /* Secondary */
+ --gds-color-secondary: #422082;
+ --gds-color-secondary-hover: #6a5fc1;
+
+ /* Accent */
+ --gds-color-accent: #c2ef4e;
+ --gds-color-accent-hover: #6a5fc1;
+
+ /* Status */
+ --gds-color-success: #c2ef4e;
+ --gds-color-warning: #ffb287;
+ --gds-color-danger: #fa7faa;
+ --gds-color-info: #6a5fc1;
+
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #1f1633;
+
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(106, 95, 193, 0.4);
+
+ /* Typography */
+ --gds-font-sans: 'Rubik', -apple-system, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif;
+ --gds-font-mono: 'Monaco', Menlo, 'Ubuntu Mono', monospace;
+
+ /* Font sizes */
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.25rem;
+ --gds-font-size-xl: 1.5rem;
+ --gds-font-size-2xl: 1.875rem;
+
+ /* Font weights */
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
+
+ /* Line heights */
+ --gds-line-height-tight: 1.20;
+ --gds-line-height-normal: 1.50;
+ --gds-line-height-relaxed: 1.60;
+
+ /* Shadows */
+ --gds-shadow-sm: rgba(0, 0, 0, 0.08) 0px 2px 8px 0px;
+ --gds-shadow-md: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px 0px;
+ --gds-shadow-lg: rgba(0, 0, 0, 0.18) 0px 8px 24px 0px;
+ --gds-shadow-xl: rgba(22, 15, 36, 0.9) 0px 4px 4px 9px;
+
+ /* Motion */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+ /* Z-index */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
+
+ /* Radius */
+ --gds-radius-sm: 6px;
+ --gds-radius-md: 8px;
+ --gds-radius-lg: 12px;
+ --gds-radius-xl: 13px;
+ --gds-radius-full: 9999px;
+
+ /* Spacing */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
+}

@@ -26,14 +26,14 @@ pnpm storybook
 
 ```
 packages/
-  core/           — All components, tokens, reset, utilities
-  cli/             — CLI: component docs, templates, agent docs
-  theme-neutral/   — Neutral Light theme
-  theme-dark/      — Neutral Dark theme
-  theme-warm/      — Neutral Warm theme
+ core/      — All components, tokens, reset, utilities
+ cli/       — CLI: component docs, templates, agent docs
+ theme-neutral/  — Neutral Light theme
+ theme-dark/   — Neutral Dark theme
+ theme-warm/   — Neutral Warm theme
 apps/
-  docs/            — Documentation site (Vite)
-  demo/            — Demo app
+ docs/      — Documentation site (Vite)
+ demo/      — Demo app
 ```
 
 ## Component Guidelines

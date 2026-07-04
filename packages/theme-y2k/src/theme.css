@@ -1,112 +1,112 @@
 /* GDS Theme: Y2K
-   Retro-futurist, playful aesthetic. Light background with hot pink & cyan.
-   Rounded, fun, early-2000s digital vibes. */
+  Retro-futurist, playful aesthetic. Light background with hot pink & cyan.
+  Rounded, fun, early-2000s digital vibes. */
 
 :root {
-  /* ─── Color tokens ─────────────────────────────────────────────── */
-  /* Background */
-  --gds-color-bg: #f0f0ff;
-  --gds-color-bg-elevated: #ffffff;
-  --gds-color-bg-muted: #e8e8ff;
+ /* Color tokens */
+ /* Background */
+ --gds-color-bg: #f0f0ff;
+ --gds-color-bg-elevated: #ffffff;
+ --gds-color-bg-muted: #e8e8ff;
 
-  /* Surface */
-  --gds-color-surface: #f8f8ff;
-  --gds-color-surface-hover: #e0e0ff;
+ /* Surface */
+ --gds-color-surface: #f8f8ff;
+ --gds-color-surface-hover: #e0e0ff;
 
-  /* Border */
-  --gds-color-border: #d0d0f0;
-  --gds-color-border-strong: #b0b0e0;
+ /* Border */
+ --gds-color-border: #d0d0f0;
+ --gds-color-border-strong: #b0b0e0;
 
-  /* Text */
-  --gds-color-text: #1a1a3a;
-  --gds-color-text-muted: #5a5a8a;
-  --gds-color-text-subtle: #9a9ac0;
-  --gds-color-text-inverse: #ffffff;
+ /* Text */
+ --gds-color-text: #1a1a3a;
+ --gds-color-text-muted: #5a5a8a;
+ --gds-color-text-subtle: #9a9ac0;
+ --gds-color-text-inverse: #ffffff;
 
-  /* Primary — hot pink */
-  --gds-color-primary: #ec4899;
-  --gds-color-primary-hover: #db2777;
-  --gds-color-primary-active: #be185d;
+ /* Primary — hot pink */
+ --gds-color-primary: #ec4899;
+ --gds-color-primary-hover: #db2777;
+ --gds-color-primary-active: #be185d;
 
-  /* Secondary */
-  --gds-color-secondary: #8b8bcd;
-  --gds-color-secondary-hover: #6d6db0;
+ /* Secondary */
+ --gds-color-secondary: #8b8bcd;
+ --gds-color-secondary-hover: #6d6db0;
 
-  /* Accent — cyan */
-  --gds-color-accent: #06b6d4;
-  --gds-color-accent-hover: #0891b2;
+ /* Accent — cyan */
+ --gds-color-accent: #06b6d4;
+ --gds-color-accent-hover: #0891b2;
 
-  /* Status */
-  --gds-color-success: #10b981;
-  --gds-color-warning: #f59e0b;
-  --gds-color-danger: #ef4444;
-  --gds-color-info: #06b6d4;
+ /* Status */
+ --gds-color-success: #10b981;
+ --gds-color-warning: #f59e0b;
+ --gds-color-danger: #ef4444;
+ --gds-color-info: #06b6d4;
 
-  /* On-colors */
-  --gds-color-on-primary: #ffffff;
-  --gds-color-on-secondary: #ffffff;
-  --gds-color-on-accent: #ffffff;
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #ffffff;
 
-  /* Focus ring */
-  --gds-color-focus-ring: rgba(236, 72, 153, 0.4);
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(236, 72, 153, 0.4);
 
-  /* ─── Spacing tokens (4px base) ─────────────────────────────────── */
-  --gds-space-0: 0;
-  --gds-space-1: 0.25rem;
-  --gds-space-2: 0.5rem;
-  --gds-space-3: 0.75rem;
-  --gds-space-4: 1rem;
-  --gds-space-5: 1.25rem;
-  --gds-space-6: 1.5rem;
-  --gds-space-8: 2rem;
-  --gds-space-10: 2.5rem;
-  --gds-space-12: 3rem;
-  --gds-space-16: 4rem;
+ /* Spacing tokens (4px base) */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
 
-  /* ─── Radius tokens — playful, extra rounded ─────────────────── */
-  --gds-radius-sm: 6px;
-  --gds-radius-md: 12px;
-  --gds-radius-lg: 16px;
-  --gds-radius-xl: 24px;
-  --gds-radius-full: 9999px;
+ /* Radius tokens — playful, extra rounded */
+ --gds-radius-sm: 6px;
+ --gds-radius-md: 12px;
+ --gds-radius-lg: 16px;
+ --gds-radius-xl: 24px;
+ --gds-radius-full: 9999px;
 
-  /* ─── Typography tokens ────────────────────────────────────────── */
-  --gds-font-sans: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
-  --gds-font-mono: 'Consolas', 'Courier New', monospace;
+ /* Typography tokens */
+ --gds-font-sans: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+ --gds-font-mono: 'Consolas', 'Courier New', monospace;
 
-  --gds-font-size-xs: 0.75rem;
-  --gds-font-size-sm: 0.875rem;
-  --gds-font-size-md: 1rem;
-  --gds-font-size-lg: 1.125rem;
-  --gds-font-size-xl: 1.25rem;
-  --gds-font-size-2xl: 1.5rem;
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.125rem;
+ --gds-font-size-xl: 1.25rem;
+ --gds-font-size-2xl: 1.5rem;
 
-  --gds-font-weight-normal: 400;
-  --gds-font-weight-medium: 500;
-  --gds-font-weight-semibold: 600;
-  --gds-font-weight-bold: 700;
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
 
-  --gds-line-height-tight: 1.25;
-  --gds-line-height-normal: 1.5;
-  --gds-line-height-relaxed: 1.75;
+ --gds-line-height-tight: 1.25;
+ --gds-line-height-normal: 1.5;
+ --gds-line-height-relaxed: 1.75;
 
-  /* ─── Elevation tokens — soft, playful shadows ───────────────── */
-  --gds-shadow-sm: 0 1px 3px 0 rgba(139, 92, 246, 0.1);
-  --gds-shadow-md: 0 4px 8px -2px rgba(139, 92, 246, 0.15), 0 2px 4px -2px rgba(236, 72, 153, 0.1);
-  --gds-shadow-lg: 0 10px 20px -5px rgba(139, 92, 246, 0.18), 0 4px 8px -4px rgba(236, 72, 153, 0.1);
-  --gds-shadow-xl: 0 20px 35px -10px rgba(139, 92, 246, 0.2), 0 8px 12px -8px rgba(236, 72, 153, 0.1);
+ /* Elevation tokens — soft, playful shadows */
+ --gds-shadow-sm: 0 1px 3px 0 rgba(139, 92, 246, 0.1);
+ --gds-shadow-md: 0 4px 8px -2px rgba(139, 92, 246, 0.15), 0 2px 4px -2px rgba(236, 72, 153, 0.1);
+ --gds-shadow-lg: 0 10px 20px -5px rgba(139, 92, 246, 0.18), 0 4px 8px -4px rgba(236, 72, 153, 0.1);
+ --gds-shadow-xl: 0 20px 35px -10px rgba(139, 92, 246, 0.2), 0 8px 12px -8px rgba(236, 72, 153, 0.1);
 
-  /* ─── Motion tokens ────────────────────────────────────────────── */
-  --gds-duration-fast: 150ms;
-  --gds-duration-normal: 200ms;
-  --gds-duration-slow: 300ms;
-  --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+ /* Motion tokens */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* ─── Z-index tokens ───────────────────────────────────────────── */
-  --gds-z-base: 0;
-  --gds-z-dropdown: 100;
-  --gds-z-sticky: 200;
-  --gds-z-overlay: 1000;
-  --gds-z-modal: 1100;
-  --gds-z-toast: 1200;
+ /* Z-index tokens */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
 }

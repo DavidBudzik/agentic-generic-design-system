@@ -1,60 +1,60 @@
 /* GDS Theme: Neutral Dark
-   A muted, minimal dark palette. Dark mode companion to Neutral Light. */
+  A muted, minimal dark palette. Dark mode companion to Neutral Light. */
 
 :root {
-  /* Background */
-  --gds-color-bg: #0a0a0a;
-  --gds-color-bg-elevated: #171717;
-  --gds-color-bg-muted: #1c1c1c;
+ /* Background */
+ --gds-color-bg: #0a0a0a;
+ --gds-color-bg-elevated: #171717;
+ --gds-color-bg-muted: #1c1c1c;
 
-  /* Surface */
-  --gds-color-surface: #1a1a1a;
-  --gds-color-surface-hover: #262626;
+ /* Surface */
+ --gds-color-surface: #1a1a1a;
+ --gds-color-surface-hover: #262626;
 
-  /* Border */
-  --gds-color-border: #2e2e2e;
-  --gds-color-border-strong: #404040;
+ /* Border */
+ --gds-color-border: #2e2e2e;
+ --gds-color-border-strong: #404040;
 
-  /* Text */
-  --gds-color-text: #fafafa;
-  --gds-color-text-muted: #a3a3a3;
-  --gds-color-text-subtle: #525252;
-  --gds-color-text-inverse: #0a0a0a;
+ /* Text */
+ --gds-color-text: #fafafa;
+ --gds-color-text-muted: #a3a3a3;
+ --gds-color-text-subtle: #525252;
+ --gds-color-text-inverse: #0a0a0a;
 
-  /* Primary */
-  --gds-color-primary: #3b82f6;
-  --gds-color-primary-hover: #60a5fa;
-  --gds-color-primary-active: #2563eb;
+ /* Primary */
+ --gds-color-primary: #3b82f6;
+ --gds-color-primary-hover: #60a5fa;
+ --gds-color-primary-active: #2563eb;
 
-  /* Secondary */
-  --gds-color-secondary: #a1a1aa;
-  --gds-color-secondary-hover: #d4d4d8;
+ /* Secondary */
+ --gds-color-secondary: #a1a1aa;
+ --gds-color-secondary-hover: #d4d4d8;
 
-  /* Accent */
-  --gds-color-accent: #818cf8;
-  --gds-color-accent-hover: #6366f1;
+ /* Accent */
+ --gds-color-accent: #818cf8;
+ --gds-color-accent-hover: #6366f1;
 
-  /* Status */
-  --gds-color-success: #22c55e;
-  --gds-color-warning: #f59e0b;
-  --gds-color-danger: #ef4444;
-  --gds-color-info: #06b6d4;
+ /* Status */
+ --gds-color-success: #22c55e;
+ --gds-color-warning: #f59e0b;
+ --gds-color-danger: #ef4444;
+ --gds-color-info: #06b6d4;
 
-  /* On-colors */
-  --gds-color-on-primary: #0a0a0a;
-  --gds-color-on-secondary: #0a0a0a;
-  --gds-color-on-accent: #0a0a0a;
+ /* On-colors */
+ --gds-color-on-primary: #0a0a0a;
+ --gds-color-on-secondary: #0a0a0a;
+ --gds-color-on-accent: #0a0a0a;
 
-  /* Focus ring */
-  --gds-color-focus-ring: rgba(59, 130, 246, 0.5);
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(59, 130, 246, 0.5);
 
-  /* Typography */
-  --gds-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --gds-font-mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+ /* Typography */
+ --gds-font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+ --gds-font-mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 
-  /* Shadows */
-  --gds-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --gds-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  --gds-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
-  --gds-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+ /* Shadows */
+ --gds-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+ --gds-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+ --gds-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+ --gds-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
 }

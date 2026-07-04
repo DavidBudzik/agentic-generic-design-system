@@ -1,0 +1,114 @@
+/* GDS Theme: Airbnb
+  White bg, Rausch coral (#ff385c), Airbnb Cereal font, rounded 14-20px, photography-driven.
+  Based on Airbnb's design system. */
+
+:root {
+ /* Background */
+ --gds-color-bg: #ffffff;
+ --gds-color-bg-elevated: #ffffff;
+ --gds-color-bg-muted: #f7f7f7;
+
+ /* Surface */
+ --gds-color-surface: #ffffff;
+ --gds-color-surface-hover: #f7f7f7;
+
+ /* Border */
+ --gds-color-border: #dddddd;
+ --gds-color-border-strong: #c1c1c1;
+
+ /* Text */
+ --gds-color-text: #222222;
+ --gds-color-text-muted: #6a6a6a;
+ --gds-color-text-subtle: #929292;
+ --gds-color-text-inverse: #ffffff;
+
+ /* Primary */
+ --gds-color-primary: #ff385c;
+ --gds-color-primary-hover: #e00b41;
+ --gds-color-primary-active: #e00b41;
+
+ /* Secondary */
+ --gds-color-secondary: #222222;
+ --gds-color-secondary-hover: #3f3f3f;
+
+ /* Accent */
+ --gds-color-accent: #ff385c;
+ --gds-color-accent-hover: #e00b41;
+
+ /* Status */
+ --gds-color-success: #03904a;
+ --gds-color-warning: #ffa42b;
+ --gds-color-danger: #c13515;
+ --gds-color-info: #428bff;
+
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #ffffff;
+
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(34, 34, 34, 0.4);
+
+ /* Typography */
+ --gds-font-sans: 'Airbnb Cereal VF', 'Circular', -apple-system, system-ui, Roboto, 'Helvetica Neue', sans-serif;
+ --gds-font-mono: 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+ /* Font sizes */
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.375rem;
+ --gds-font-size-xl: 1.25rem;
+ --gds-font-size-2xl: 1.75rem;
+
+ /* Font weights */
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
+
+ /* Line heights */
+ --gds-line-height-tight: 1.18;
+ --gds-line-height-normal: 1.25;
+ --gds-line-height-relaxed: 1.43;
+
+ /* Shadows */
+ --gds-shadow-sm: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px;
+ --gds-shadow-md: rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 2px 6px 0px;
+ --gds-shadow-lg: rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 2px 6px 0px, rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+ --gds-shadow-xl: rgba(0, 0, 0, 0.02) 0px 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 2px 6px 0px, rgba(0, 0, 0, 0.1) 0px 4px 8px 0px;
+
+ /* Motion */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+ /* Z-index */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
+
+ /* Radius */
+ --gds-radius-sm: 8px;
+ --gds-radius-md: 14px;
+ --gds-radius-lg: 20px;
+ --gds-radius-xl: 32px;
+ --gds-radius-full: 9999px;
+
+ /* Spacing */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
+}

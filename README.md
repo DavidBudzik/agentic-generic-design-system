@@ -25,12 +25,12 @@ npm install -D @gds/cli
 
 ```html
 <script type="module">
-  import '@gds/core/button';
-  import '@gds/core/layout';
+ import '@gds/core/button';
+ import '@gds/core/layout';
 </script>
 
 <gds-vstack gap="2">
-  <gds-button label="Hello GDS"></gds-button>
+ <gds-button label="Hello GDS"></gds-button>
 </gds-vstack>
 ```
 

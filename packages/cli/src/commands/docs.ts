@@ -1,7 +1,7 @@
 import type { CLICommand } from '../types.js';
 
 const docs: Record<string, string> = {
-  theme: `# GDS Theming Guide
+ theme: `# GDS Theming Guide
 
 ## How Themes Work
 
@@ -39,9 +39,9 @@ Override any token after the theme import:
 @import '@gds/theme-neutral/theme.css';
 
 :root {
-  --gds-color-primary: #your-brand-color;
-  --gds-color-primary-hover: #darker-shade;
-  --gds-radius-md: 6px;
+ --gds-color-primary: #your-brand-color;
+ --gds-color-primary-hover: #darker-shade;
+ --gds-radius-md: 6px;
 }
 \`\`\`
 
@@ -54,11 +54,11 @@ Use a media query or data attribute:
 @import '@gds/theme-dark/theme.css' layer(dark);
 
 @media (prefers-color-scheme: dark) {
-  @layer dark {
-    :root {
-      color-scheme: dark;
-    }
+ @layer dark {
+  :root {
+   color-scheme: dark;
   }
+ }
 }
 \`\`\`
 
@@ -66,7 +66,7 @@ Or use a class:
 
 \`\`\`css
 [data-theme="dark"] {
-  /* override tokens here */
+ /* override tokens here */
 }
 \`\`\`
 
@@ -88,7 +88,7 @@ Or use a class:
 - **Motion**: duration (fast/normal/slow), ease
 - **Z-index**: base, dropdown, sticky, overlay, modal, toast`,
 
-  tokens: `# GDS Design Tokens Reference
+ tokens: `# GDS Design Tokens Reference
 
 ## Color Tokens
 
@@ -159,7 +159,7 @@ Or use a class:
 ## Z-index Tokens
 - --gds-z-base: 0, -dropdown: 100, -sticky: 200, -overlay: 1000, -modal: 1100, -toast: 1200`,
 
-  styling: `# GDS Styling Guide
+ styling: `# GDS Styling Guide
 
 ## Approach
 
@@ -172,8 +172,8 @@ Override at the component level, page level, or theme level.
 
 \`\`\`css
 gds-button {
-  /* Override the primary color for this specific button */
-  --gds-color-primary: #ff6600;
+ /* Override the primary color for this specific button */
+ --gds-color-primary: #ff6600;
 }
 \`\`\`
 
@@ -183,7 +183,7 @@ Components expose CSS parts for targeted styling:
 
 \`\`\`css
 gds-card::part(header) {
-  border-bottom: 1px solid var(--gds-color-border);
+ border-bottom: 1px solid var(--gds-color-border);
 }
 \`\`\`
 
@@ -208,8 +208,8 @@ GDS tokens for design properties:
 
 \`\`\`html
 <div class="flex items-center gap-2">
-  <gds-button label="Save"></gds-button>
-  <gds-button label="Cancel" variant="ghost"></gds-button>
+ <gds-button label="Save"></gds-button>
+ <gds-button label="Cancel" variant="ghost"></gds-button>
 </div>
 \`\`\`
 
@@ -222,7 +222,7 @@ Style via:
 3. CSS parts (for specific elements)
 4. Inline styles (for one-offs)`,
 
-  layout: `# GDS Layout Guide
+ layout: `# GDS Layout Guide
 
 ## Frame-First Approach
 
@@ -238,41 +238,41 @@ Pick the layout shell before writing content:
 ### VStack — Vertical Stack
 \`\`\`html
 <gds-vstack gap="4" align="stretch" justify="start">
-  <child-1 />
-  <child-2 />
+ <child-1 />
+ <child-2 />
 </gds-vstack>
 \`\`\`
 
 ### HStack — Horizontal Stack
 \`\`\`html
 <gds-hstack gap="3" align="center" justify="between" wrap>
-  <child-1 />
-  <child-2 />
+ <child-1 />
+ <child-2 />
 </gds-hstack>
 \`\`\`
 
 ### Grid — CSS Grid
 \`\`\`html
 <gds-grid columns="3" gap="4">
-  <child-1 />
-  <child-2 />
-  <child-3 />
+ <child-1 />
+ <child-2 />
+ <child-3 />
 </gds-grid>
 \`\`\`
 
 ### Container — Centered Max-Width
 \`\`\`html
 <gds-container max-width="lg" padding="6">
-  <content />
+ <content />
 </gds-container>
 \`\`\`
 
 ### AppShell — App Layout
 \`\`\`html
 <gds-appshell sidebar-open sidebar-width="240">
-  <nav slot="sidebar">...</nav>
-  <header slot="header">...</header>
-  <main>...</main>
+ <nav slot="sidebar">...</nav>
+ <header slot="header">...</header>
+ <main>...</main>
 </gds-appshell>
 \`\`\`
 
@@ -304,31 +304,31 @@ NOT for:
 };
 
 export const docsCommand: CLICommand = {
-  name: 'docs',
-  description: 'Read GDS documentation (theme, tokens, styling, layout)',
-  usage: 'gds docs <topic>',
-  args: [
-    { name: 'topic', description: 'Topic: theme, tokens, styling, or layout', required: true },
-  ],
-  options: [],
-  run: (args) => {
-    const topic = args[0];
-    if (!topic) {
-      console.log('\nAvailable topics:\n');
-      console.log('  theme    — How theming works, switching, customizing');
-      console.log('  tokens   — Full design token reference');
-      console.log('  styling   — How to style components (CSS props, parts, Tailwind)');
-      console.log('  layout   — Layout patterns and component selection guide');
-      console.log();
-      return;
-    }
+ name: 'docs',
+ description: 'Read GDS documentation (theme, tokens, styling, layout)',
+ usage: 'gds docs <topic>',
+ args: [
+  { name: 'topic', description: 'Topic: theme, tokens, styling, or layout', required: true },
+ ],
+ options: [],
+ run: (args) => {
+  const topic = args[0];
+  if (!topic) {
+   console.log('\nAvailable topics:\n');
+   console.log(' theme  — How theming works, switching, customizing');
+   console.log(' tokens  — Full design token reference');
+   console.log(' styling  — How to style components (CSS props, parts, Tailwind)');
+   console.log(' layout  — Layout patterns and component selection guide');
+   console.log();
+   return;
+  }
 
-    const content = docs[topic];
-    if (!content) {
-      console.error(`Topic "${topic}" not found. Available: ${Object.keys(docs).join(', ')}`);
-      process.exit(1);
-    }
+  const content = docs[topic];
+  if (!content) {
+   console.error(`Topic "${topic}" not found. Available: ${Object.keys(docs).join(', ')}`);
+   process.exit(1);
+  }
 
-    console.log(content);
-  },
+  console.log(content);
+ },
 };

@@ -14,21 +14,21 @@
 
 ```
 generic-design-system/
-├── pnpm-workspace.yaml
-├── package.json
-├── tsconfig.json
-├── packages/
-│   ├── core/           # All components, tokens, reset, utilities
-│   ├── cli/            # CLI tool: docs, templates, agent setup
-│   ├── theme-neutral/  # Neutral Light theme
-│   ├── theme-dark/     # Neutral Dark theme
-│   └── theme-warm/     # Neutral Warm theme
-├── apps/
-│   ├── docs/           # Storybook docs site
-│   └── demo/           # Demo app using all components
-├── templates/          # Page templates (dashboard, settings, auth)
-└── internal/
-    └── test-utils/     # Shared test utilities
+ pnpm-workspace.yaml
+ package.json
+ tsconfig.json
+ packages/
+  core/      # All components, tokens, reset, utilities
+  cli/      # CLI tool: docs, templates, agent setup
+  theme-neutral/ # Neutral Light theme
+  theme-dark/   # Neutral Dark theme
+  theme-warm/   # Neutral Warm theme
+ apps/
+  docs/      # Storybook docs site
+  demo/      # Demo app using all components
+ templates/     # Page templates (dashboard, settings, auth)
+ internal/
+   test-utils/   # Shared test utilities
 ```
 
 ## Component Inventory (50+)

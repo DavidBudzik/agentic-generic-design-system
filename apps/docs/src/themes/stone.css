@@ -1,112 +1,112 @@
 /* GDS Theme: Stone
-   Natural, earthy, stone-like palette. Warm grays with slate primary and sage accent.
-   Muted, grounded, organic feel. */
+  Natural, earthy, stone-like palette. Warm grays with slate primary and sage accent.
+  Muted, grounded, organic feel. */
 
 :root {
-  /* ─── Color tokens ─────────────────────────────────────────────── */
-  /* Background */
-  --gds-color-bg: #f5f4f0;
-  --gds-color-bg-elevated: #fafaf8;
-  --gds-color-bg-muted: #edecea;
+ /* Color tokens */
+ /* Background */
+ --gds-color-bg: #f5f4f0;
+ --gds-color-bg-elevated: #fafaf8;
+ --gds-color-bg-muted: #edecea;
 
-  /* Surface */
-  --gds-color-surface: #efeee8;
-  --gds-color-surface-hover: #e4e2dc;
+ /* Surface */
+ --gds-color-surface: #efeee8;
+ --gds-color-surface-hover: #e4e2dc;
 
-  /* Border */
-  --gds-color-border: #d8d5cc;
-  --gds-color-border-strong: #c4c0b5;
+ /* Border */
+ --gds-color-border: #d8d5cc;
+ --gds-color-border-strong: #c4c0b5;
 
-  /* Text */
-  --gds-color-text: #2d2d2a;
-  --gds-color-text-muted: #6b6b65;
-  --gds-color-text-subtle: #a09a90;
-  --gds-color-text-inverse: #f5f4f0;
+ /* Text */
+ --gds-color-text: #2d2d2a;
+ --gds-color-text-muted: #6b6b65;
+ --gds-color-text-subtle: #a09a90;
+ --gds-color-text-inverse: #f5f4f0;
 
-  /* Primary — slate */
-  --gds-color-primary: #475569;
-  --gds-color-primary-hover: #334155;
-  --gds-color-primary-active: #1e293b;
+ /* Primary — slate */
+ --gds-color-primary: #475569;
+ --gds-color-primary-hover: #334155;
+ --gds-color-primary-active: #1e293b;
 
-  /* Secondary */
-  --gds-color-secondary: #78716c;
-  --gds-color-secondary-hover: #57534e;
+ /* Secondary */
+ --gds-color-secondary: #78716c;
+ --gds-color-secondary-hover: #57534e;
 
-  /* Accent — sage */
-  --gds-color-accent: #84cc16;
-  --gds-color-accent-hover: #65a30d;
+ /* Accent — sage */
+ --gds-color-accent: #84cc16;
+ --gds-color-accent-hover: #65a30d;
 
-  /* Status */
-  --gds-color-success: #65a30d;
-  --gds-color-warning: #ca8a04;
-  --gds-color-danger: #b91c1c;
-  --gds-color-info: #0e7490;
+ /* Status */
+ --gds-color-success: #65a30d;
+ --gds-color-warning: #ca8a04;
+ --gds-color-danger: #b91c1c;
+ --gds-color-info: #0e7490;
 
-  /* On-colors */
-  --gds-color-on-primary: #ffffff;
-  --gds-color-on-secondary: #ffffff;
-  --gds-color-on-accent: #2d2d2a;
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #2d2d2a;
 
-  /* Focus ring */
-  --gds-color-focus-ring: rgba(71, 85, 105, 0.4);
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(71, 85, 105, 0.4);
 
-  /* ─── Spacing tokens (4px base) ─────────────────────────────────── */
-  --gds-space-0: 0;
-  --gds-space-1: 0.25rem;
-  --gds-space-2: 0.5rem;
-  --gds-space-3: 0.75rem;
-  --gds-space-4: 1rem;
-  --gds-space-5: 1.25rem;
-  --gds-space-6: 1.5rem;
-  --gds-space-8: 2rem;
-  --gds-space-10: 2.5rem;
-  --gds-space-12: 3rem;
-  --gds-space-16: 4rem;
+ /* Spacing tokens (4px base) */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
 
-  /* ─── Radius tokens ────────────────────────────────────────────── */
-  --gds-radius-sm: 4px;
-  --gds-radius-md: 8px;
-  --gds-radius-lg: 12px;
-  --gds-radius-xl: 16px;
-  --gds-radius-full: 9999px;
+ /* Radius tokens */
+ --gds-radius-sm: 4px;
+ --gds-radius-md: 8px;
+ --gds-radius-lg: 12px;
+ --gds-radius-xl: 16px;
+ --gds-radius-full: 9999px;
 
-  /* ─── Typography tokens ────────────────────────────────────────── */
-  --gds-font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --gds-font-mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+ /* Typography tokens */
+ --gds-font-sans: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+ --gds-font-mono: 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, 'Liberation Mono', monospace;
 
-  --gds-font-size-xs: 0.75rem;
-  --gds-font-size-sm: 0.875rem;
-  --gds-font-size-md: 1rem;
-  --gds-font-size-lg: 1.125rem;
-  --gds-font-size-xl: 1.25rem;
-  --gds-font-size-2xl: 1.5rem;
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.125rem;
+ --gds-font-size-xl: 1.25rem;
+ --gds-font-size-2xl: 1.5rem;
 
-  --gds-font-weight-normal: 400;
-  --gds-font-weight-medium: 500;
-  --gds-font-weight-semibold: 600;
-  --gds-font-weight-bold: 700;
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
 
-  --gds-line-height-tight: 1.25;
-  --gds-line-height-normal: 1.5;
-  --gds-line-height-relaxed: 1.75;
+ --gds-line-height-tight: 1.25;
+ --gds-line-height-normal: 1.5;
+ --gds-line-height-relaxed: 1.75;
 
-  /* ─── Elevation tokens — muted, soft shadows ─────────────────── */
-  --gds-shadow-sm: 0 1px 2px 0 rgba(100, 95, 85, 0.05);
-  --gds-shadow-md: 0 4px 6px -1px rgba(100, 95, 85, 0.06), 0 2px 4px -2px rgba(100, 95, 85, 0.04);
-  --gds-shadow-lg: 0 10px 15px -3px rgba(100, 95, 85, 0.07), 0 4px 6px -4px rgba(100, 95, 85, 0.04);
-  --gds-shadow-xl: 0 20px 25px -5px rgba(100, 95, 85, 0.08), 0 8px 10px -6px rgba(100, 95, 85, 0.05);
+ /* Elevation tokens — muted, soft shadows */
+ --gds-shadow-sm: 0 1px 2px 0 rgba(100, 95, 85, 0.05);
+ --gds-shadow-md: 0 4px 6px -1px rgba(100, 95, 85, 0.06), 0 2px 4px -2px rgba(100, 95, 85, 0.04);
+ --gds-shadow-lg: 0 10px 15px -3px rgba(100, 95, 85, 0.07), 0 4px 6px -4px rgba(100, 95, 85, 0.04);
+ --gds-shadow-xl: 0 20px 25px -5px rgba(100, 95, 85, 0.08), 0 8px 10px -6px rgba(100, 95, 85, 0.05);
 
-  /* ─── Motion tokens ────────────────────────────────────────────── */
-  --gds-duration-fast: 150ms;
-  --gds-duration-normal: 200ms;
-  --gds-duration-slow: 300ms;
-  --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+ /* Motion tokens */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* ─── Z-index tokens ───────────────────────────────────────────── */
-  --gds-z-base: 0;
-  --gds-z-dropdown: 100;
-  --gds-z-sticky: 200;
-  --gds-z-overlay: 1000;
-  --gds-z-modal: 1100;
-  --gds-z-toast: 1200;
+ /* Z-index tokens */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
 }

@@ -1,0 +1,114 @@
+/* GDS Theme: Supabase
+  Dark bg (#1c1c1c), green (#3ecf8e), custom font, developer-focused.
+  Based on Supabase's design system. */
+
+:root {
+ /* Background */
+ --gds-color-bg: #171717;
+ --gds-color-bg-elevated: #1a1a1a;
+ --gds-color-bg-muted: #0f0f0f;
+
+ /* Surface */
+ --gds-color-surface: #171717;
+ --gds-color-surface-hover: #1a1a1a;
+
+ /* Border */
+ --gds-color-border: #2e2e2e;
+ --gds-color-border-strong: #363636;
+
+ /* Text */
+ --gds-color-text: #fafafa;
+ --gds-color-text-muted: #b4b4b4;
+ --gds-color-text-subtle: #898989;
+ --gds-color-text-inverse: #171717;
+
+ /* Primary */
+ --gds-color-primary: #3ecf8e;
+ --gds-color-primary-hover: #00c573;
+ --gds-color-primary-active: #00c573;
+
+ /* Secondary */
+ --gds-color-secondary: #434343;
+ --gds-color-secondary-hover: #4d4d4d;
+
+ /* Accent */
+ --gds-color-accent: #3ecf8e;
+ --gds-color-accent-hover: #00c573;
+
+ /* Status */
+ --gds-color-success: #3ecf8e;
+ --gds-color-warning: #ffa42b;
+ --gds-color-danger: #e52020;
+ --gds-color-info: #539df5;
+
+ /* On-colors */
+ --gds-color-on-primary: #171717;
+ --gds-color-on-secondary: #fafafa;
+ --gds-color-on-accent: #171717;
+
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(62, 207, 142, 0.4);
+
+ /* Typography */
+ --gds-font-sans: 'Circular', 'custom-font', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --gds-font-mono: 'Source Code Pro', 'Office Code Pro', Menlo, monospace;
+
+ /* Font sizes */
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.125rem;
+ --gds-font-size-xl: 1.5rem;
+ --gds-font-size-2xl: 2.25rem;
+
+ /* Font weights */
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 500;
+ --gds-font-weight-bold: 700;
+
+ /* Line heights */
+ --gds-line-height-tight: 1.00;
+ --gds-line-height-normal: 1.50;
+ --gds-line-height-relaxed: 1.56;
+
+ /* Shadows */
+ --gds-shadow-sm: none;
+ --gds-shadow-md: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ --gds-shadow-lg: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+ --gds-shadow-xl: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+ /* Motion */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+ /* Z-index */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
+
+ /* Radius */
+ --gds-radius-sm: 6px;
+ --gds-radius-md: 8px;
+ --gds-radius-lg: 12px;
+ --gds-radius-xl: 16px;
+ --gds-radius-full: 9999px;
+
+ /* Spacing */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
+}

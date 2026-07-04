@@ -1,0 +1,114 @@
+/* GDS Theme: Apple
+  White/#f5f5f7 bg, blue (#0071e3), SF Pro, pill/capsule geometry, premium minimalism.
+  Based on Apple's design system. */
+
+:root {
+ /* Background */
+ --gds-color-bg: #ffffff;
+ --gds-color-bg-elevated: #ffffff;
+ --gds-color-bg-muted: #f5f5f7;
+
+ /* Surface */
+ --gds-color-surface: #f5f5f7;
+ --gds-color-surface-hover: #e8e8ed;
+
+ /* Border */
+ --gds-color-border: #d2d2d7;
+ --gds-color-border-strong: #86868b;
+
+ /* Text */
+ --gds-color-text: #1d1d1f;
+ --gds-color-text-muted: #6e6e73;
+ --gds-color-text-subtle: #86868b;
+ --gds-color-text-inverse: #ffffff;
+
+ /* Primary */
+ --gds-color-primary: #0071e3;
+ --gds-color-primary-hover: #0066cc;
+ --gds-color-primary-active: #0066cc;
+
+ /* Secondary */
+ --gds-color-secondary: #1d1d1f;
+ --gds-color-secondary-hover: #0a0b0f;
+
+ /* Accent */
+ --gds-color-accent: #2997ff;
+ --gds-color-accent-hover: #0071e3;
+
+ /* Status */
+ --gds-color-success: #03904a;
+ --gds-color-warning: #ff9500;
+ --gds-color-danger: #ff3b30;
+ --gds-color-info: #0071e3;
+
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #ffffff;
+
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(0, 113, 227, 0.4);
+
+ /* Typography */
+ --gds-font-sans: 'SF Pro Display', 'SF Pro Icons', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ --gds-font-mono: 'SF Mono', 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+
+ /* Font sizes */
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.875rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.0625rem;
+ --gds-font-size-xl: 1.1875rem;
+ --gds-font-size-2xl: 1.5rem;
+
+ /* Font weights */
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
+
+ /* Line heights */
+ --gds-line-height-tight: 1.07;
+ --gds-line-height-normal: 1.47;
+ --gds-line-height-relaxed: 1.60;
+
+ /* Shadows */
+ --gds-shadow-sm: rgba(0, 0, 0, 0.08) 0px 1px 3px 0px;
+ --gds-shadow-md: rgba(0, 0, 0, 0.08) 0px 4px 12px 0px;
+ --gds-shadow-lg: rgba(0, 0, 0, 0.12) 0px 8px 24px 0px;
+ --gds-shadow-xl: rgba(0, 0, 0, 0.22) 0px 16px 48px 0px;
+
+ /* Motion */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+ /* Z-index */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
+
+ /* Radius */
+ --gds-radius-sm: 8px;
+ --gds-radius-md: 12px;
+ --gds-radius-lg: 18px;
+ --gds-radius-xl: 28px;
+ --gds-radius-full: 9999px;
+
+ /* Spacing */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
+}

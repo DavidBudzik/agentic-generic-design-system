@@ -1,0 +1,114 @@
+/* GDS Theme: Ferrari
+  Black/white chiaroscuro, Ferrari Red (#DA291C), FerrariSans, near-zero radius (2px).
+  Based on Ferrari's design system. */
+
+:root {
+ /* Background */
+ --gds-color-bg: #ffffff;
+ --gds-color-bg-elevated: #ffffff;
+ --gds-color-bg-muted: #f0f0f0;
+
+ /* Surface */
+ --gds-color-surface: #ffffff;
+ --gds-color-surface-hover: #f5f5f5;
+
+ /* Border */
+ --gds-color-border: #d2d2d2;
+ --gds-color-border-strong: #8f8f8f;
+
+ /* Text */
+ --gds-color-text: #181818;
+ --gds-color-text-muted: #666666;
+ --gds-color-text-subtle: #8f8f8f;
+ --gds-color-text-inverse: #ffffff;
+
+ /* Primary */
+ --gds-color-primary: #da291c;
+ --gds-color-primary-hover: #b01e0a;
+ --gds-color-primary-active: #9d2211;
+
+ /* Secondary */
+ --gds-color-secondary: #181818;
+ --gds-color-secondary-hover: #0a0b0f;
+
+ /* Accent */
+ --gds-color-accent: #da291c;
+ --gds-color-accent-hover: #b01e0a;
+
+ /* Status */
+ --gds-color-success: #03904a;
+ --gds-color-warning: #f13a2c;
+ --gds-color-danger: #f13a2c;
+ --gds-color-info: #4c98b9;
+
+ /* On-colors */
+ --gds-color-on-primary: #ffffff;
+ --gds-color-on-secondary: #ffffff;
+ --gds-color-on-accent: #ffffff;
+
+ /* Focus ring */
+ --gds-color-focus-ring: rgba(218, 41, 28, 0.4);
+
+ /* Typography */
+ --gds-font-sans: 'FerrariSans', Arial, Helvetica, sans-serif;
+ --gds-font-mono: 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+
+ /* Font sizes */
+ --gds-font-size-xs: 0.75rem;
+ --gds-font-size-sm: 0.8125rem;
+ --gds-font-size-md: 1rem;
+ --gds-font-size-lg: 1.125rem;
+ --gds-font-size-xl: 1.5rem;
+ --gds-font-size-2xl: 1.625rem;
+
+ /* Font weights */
+ --gds-font-weight-normal: 400;
+ --gds-font-weight-medium: 500;
+ --gds-font-weight-semibold: 600;
+ --gds-font-weight-bold: 700;
+
+ /* Line heights */
+ --gds-line-height-tight: 1.20;
+ --gds-line-height-normal: 1.30;
+ --gds-line-height-relaxed: 1.50;
+
+ /* Shadows */
+ --gds-shadow-sm: none;
+ --gds-shadow-md: rgb(153, 153, 153) 1px 1px 1px 0px;
+ --gds-shadow-lg: rgb(153, 153, 153) 1px 1px 1px 0px;
+ --gds-shadow-xl: rgb(153, 153, 153) 1px 1px 1px 0px;
+
+ /* Motion */
+ --gds-duration-fast: 150ms;
+ --gds-duration-normal: 200ms;
+ --gds-duration-slow: 300ms;
+ --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+ /* Z-index */
+ --gds-z-base: 0;
+ --gds-z-dropdown: 100;
+ --gds-z-sticky: 200;
+ --gds-z-overlay: 1000;
+ --gds-z-modal: 1100;
+ --gds-z-toast: 1200;
+
+ /* Radius */
+ --gds-radius-sm: 1px;
+ --gds-radius-md: 2px;
+ --gds-radius-lg: 2px;
+ --gds-radius-xl: 8px;
+ --gds-radius-full: 9999px;
+
+ /* Spacing */
+ --gds-space-0: 0;
+ --gds-space-1: 0.25rem;
+ --gds-space-2: 0.5rem;
+ --gds-space-3: 0.75rem;
+ --gds-space-4: 1rem;
+ --gds-space-5: 1.25rem;
+ --gds-space-6: 1.5rem;
+ --gds-space-8: 2rem;
+ --gds-space-10: 2.5rem;
+ --gds-space-12: 3rem;
+ --gds-space-16: 4rem;
+}
