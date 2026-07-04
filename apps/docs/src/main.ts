@@ -4,7 +4,7 @@ import '@gds/core';
 // Import all theme CSS as raw strings — Vite ?raw gives us the file content
 import neutralTheme from './themes/neutral.css?raw';
 import darkTheme from './themes/dark.css?raw';
-import warmTheme from './themes/warm.css?raw';
+import raycastTheme from './themes/raycast.css?raw';
 import gothicTheme from './themes/gothic.css?raw';
 import y2kTheme from './themes/y2k.css?raw';
 import stoneTheme from './themes/stone.css?raw';
@@ -14,7 +14,7 @@ import linearAppTheme from './themes/linear-app.css?raw';
 import vercelTheme from './themes/vercel.css?raw';
 import notionTheme from './themes/notion.css?raw';
 import spotifyTheme from './themes/spotify.css?raw';
-import claudeTheme from './themes/claude.css?raw';
+import figmaTheme from './themes/figma.css?raw';
 import nvidiaTheme from './themes/nvidia.css?raw';
 import ferrariTheme from './themes/ferrari.css?raw';
 import appleTheme from './themes/apple.css?raw';
@@ -25,7 +25,7 @@ import sentryTheme from './themes/sentry.css?raw';
 const themes: Record<string, string> = {
  neutral: neutralTheme,
  dark: darkTheme,
- warm: warmTheme,
+ raycast: raycastTheme,
  gothic: gothicTheme,
  y2k: y2kTheme,
  stone: stoneTheme,
@@ -35,7 +35,7 @@ const themes: Record<string, string> = {
  vercel: vercelTheme,
  notion: notionTheme,
  spotify: spotifyTheme,
- claude: claudeTheme,
+ figma: figmaTheme,
  nvidia: nvidiaTheme,
  ferrari: ferrariTheme,
  apple: appleTheme,
@@ -55,7 +55,7 @@ let currentTheme = 'neutral';
 const themeMeta: { key: string; label: string; group: string; color: string }[] = [
  { key: 'neutral', label: 'Neutral', group: 'Core', color: '#2563eb' },
  { key: 'dark', label: 'Dark', group: 'Core', color: '#3b82f6' },
- { key: 'warm', label: 'Warm', group: 'Core', color: '#b45309' },
+ { key: 'raycast', label: 'Raycast', group: 'Core', color: '#ff6363' },
  { key: 'gothic', label: 'Gothic', group: 'Core', color: '#a855f7' },
  { key: 'y2k', label: 'Y2K', group: 'Core', color: '#ec4899' },
  { key: 'stone', label: 'Stone', group: 'Core', color: '#475569' },
@@ -65,7 +65,7 @@ const themeMeta: { key: string; label: string; group: string; color: string }[] 
  { key: 'vercel', label: 'Vercel', group: 'Brand', color: '#171717' },
  { key: 'notion', label: 'Notion', group: 'Brand', color: '#2eaadc' },
  { key: 'spotify', label: 'Spotify', group: 'Brand', color: '#1ed760' },
- { key: 'claude', label: 'Claude', group: 'Brand', color: '#c96442' },
+ { key: 'figma', label: 'Figma', group: 'Brand', color: '#0acf83' },
  { key: 'nvidia', label: 'NVIDIA', group: 'Brand', color: '#76b900' },
  { key: 'ferrari', label: 'Ferrari', group: 'Brand', color: '#DA291C' },
  { key: 'apple', label: 'Apple', group: 'Brand', color: '#0071e3' },

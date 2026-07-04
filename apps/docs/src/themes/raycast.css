@@ -1,0 +1,94 @@
+/* GDS Theme: Raycast
+   Productivity launcher. Sleek dark chrome, vibrant gradient accents, macOS-native feel. */
+
+:root {
+  /* Background */
+  --gds-color-bg: #07080a;
+  --gds-color-bg-elevated: #101111;
+  --gds-color-bg-muted: #0d0e0f;
+
+  /* Surface */
+  --gds-color-surface: #1b1c1e;
+  --gds-color-surface-hover: #252628;
+
+  /* Border */
+  --gds-color-border: rgba(255, 255, 255, 0.06);
+  --gds-color-border-strong: rgba(255, 255, 255, 0.1);
+
+  /* Text */
+  --gds-color-text: #f9f9f9;
+  --gds-color-text-muted: #cecece;
+  --gds-color-text-subtle: #6a6b6c;
+  --gds-color-text-inverse: #07080a;
+
+  /* Primary — Raycast Red */
+  --gds-color-primary: #ff6363;
+  --gds-color-primary-hover: #ff8080;
+  --gds-color-primary-active: #e54d4d;
+
+  /* Secondary */
+  --gds-color-secondary: #55b3ff;
+  --gds-color-secondary-hover: #7bc4ff;
+
+  /* Accent — Raycast Blue */
+  --gds-color-accent: #55b3ff;
+  --gds-color-accent-hover: #7bc4ff;
+
+  /* Status */
+  --gds-color-success: #5fc992;
+  --gds-color-warning: #ffbc33;
+  --gds-color-danger: #ff6363;
+  --gds-color-info: #55b3ff;
+
+  /* On-colors */
+  --gds-color-on-primary: #07080a;
+  --gds-color-on-secondary: #07080a;
+  --gds-color-on-accent: #07080a;
+
+  /* Focus ring */
+  --gds-color-focus-ring: hsla(202, 100%, 67%, 0.4);
+
+  /* Typography */
+  --gds-font-sans: 'Geist', 'Inter', system-ui, -apple-system, sans-serif;
+  --gds-font-mono: 'GeistMono', 'SF Mono', ui-monospace, Menlo, monospace;
+
+  /* Shadows — macOS-native multi-layer */
+  --gds-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --gds-shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.4), 0 1px 3px rgba(0, 0, 0, 0.2);
+  --gds-shadow-lg: 0 12px 32px -8px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --gds-shadow-xl: 0 24px 64px -16px rgba(0, 0, 0, 0.6), 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  /* Motion */
+  --gds-duration-fast: 120ms;
+  --gds-duration-normal: 200ms;
+  --gds-duration-slow: 300ms;
+  --gds-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Z-index */
+  --gds-z-base: 0;
+  --gds-z-dropdown: 100;
+  --gds-z-sticky: 200;
+  --gds-z-overlay: 1000;
+  --gds-z-modal: 1100;
+  --gds-z-toast: 1200;
+
+  /* Radius — 6-16px, pill buttons */
+  --gds-radius-sm: 6px;
+  --gds-radius-md: 8px;
+  --gds-radius-lg: 12px;
+  --gds-radius-xl: 16px;
+  --gds-radius-full: 9999px;
+
+  /* Spacing */
+  --gds-space-0: 0;
+  --gds-space-1: 0.25rem;
+  --gds-space-2: 0.5rem;
+  --gds-space-3: 0.75rem;
+  --gds-space-4: 1rem;
+  --gds-space-5: 1.25rem;
+  --gds-space-6: 1.5rem;
+  --gds-space-8: 2rem;
+  --gds-space-10: 2.5rem;
+  --gds-space-12: 3rem;
+  --gds-space-16: 4rem;
+}

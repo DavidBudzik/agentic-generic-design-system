@@ -1,0 +1,94 @@
+/* GDS Theme: Figma
+   Collaborative design tool. Black-white chrome, pill geometry, playful yet professional. */
+
+:root {
+  /* Background */
+  --gds-color-bg: #ffffff;
+  --gds-color-bg-elevated: #ffffff;
+  --gds-color-bg-muted: #f5f5f5;
+
+  /* Surface */
+  --gds-color-surface: #fafafa;
+  --gds-color-surface-hover: #f0f0f0;
+
+  /* Border */
+  --gds-color-border: #e5e5e5;
+  --gds-color-border-strong: #d4d4d4;
+
+  /* Text */
+  --gds-color-text: #0a0b0f;
+  --gds-color-text-muted: #555555;
+  --gds-color-text-subtle: #999999;
+  --gds-color-text-inverse: #ffffff;
+
+  /* Primary — pure black like Figma's interface */
+  --gds-color-primary: #0a0b0f;
+  --gds-color-primary-hover: #2a2b2f;
+  --gds-color-primary-active: #000000;
+
+  /* Secondary */
+  --gds-color-secondary: #6b6b6b;
+  --gds-color-secondary-hover: #4b4b4b;
+
+  /* Accent — electric green from Figma's hero gradient */
+  --gds-color-accent: #0acf83;
+  --gds-color-accent-hover: #08a06a;
+
+  /* Status */
+  --gds-color-success: #0acf83;
+  --gds-color-warning: #ffbe0b;
+  --gds-color-danger: #f24822;
+  --gds-color-info: #1ab6ff;
+
+  /* On-colors */
+  --gds-color-on-primary: #ffffff;
+  --gds-color-on-secondary: #ffffff;
+  --gds-color-on-accent: #ffffff;
+
+  /* Focus ring — dashed-style hint via rgba */
+  --gds-color-focus-ring: rgba(10, 11, 15, 0.3);
+
+  /* Typography */
+  --gds-font-sans: 'figmaSans', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+  --gds-font-mono: 'figmaMono', 'SF Mono', Menlo, monospace;
+
+  /* Shadows — subtle, gallery-wall */
+  --gds-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  --gds-shadow-md: 0 2px 8px -2px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --gds-shadow-lg: 0 8px 24px -6px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.05);
+  --gds-shadow-xl: 0 16px 48px -12px rgba(0, 0, 0, 0.1), 0 4px 16px rgba(0, 0, 0, 0.06);
+
+  /* Motion */
+  --gds-duration-fast: 120ms;
+  --gds-duration-normal: 180ms;
+  --gds-duration-slow: 280ms;
+  --gds-ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --gds-z-base: 0;
+  --gds-z-dropdown: 100;
+  --gds-z-sticky: 200;
+  --gds-z-overlay: 1000;
+  --gds-z-modal: 1100;
+  --gds-z-toast: 1200;
+
+  /* Radius — pill geometry, 6-8px cards */
+  --gds-radius-sm: 4px;
+  --gds-radius-md: 8px;
+  --gds-radius-lg: 12px;
+  --gds-radius-xl: 50px;
+  --gds-radius-full: 9999px;
+
+  /* Spacing */
+  --gds-space-0: 0;
+  --gds-space-1: 0.25rem;
+  --gds-space-2: 0.5rem;
+  --gds-space-3: 0.75rem;
+  --gds-space-4: 1rem;
+  --gds-space-5: 1.25rem;
+  --gds-space-6: 1.5rem;
+  --gds-space-8: 2rem;
+  --gds-space-10: 2.5rem;
+  --gds-space-12: 3rem;
+  --gds-space-16: 4rem;
+}
