@@ -1,35 +1,38 @@
 import './docs.css';
 import '@gds/core';
 
-// Theme switching — loads theme CSS files dynamically
-const themePaths: Record<string, string> = {
-  neutral: '/src/themes/neutral.css',
-  dark: '/src/themes/dark.css',
-  warm: '/src/themes/warm.css',
-  gothic: '/src/themes/gothic.css',
-  y2k: '/src/themes/y2k.css',
-  stone: '/src/themes/stone.css',
-  ocean: '/src/themes/ocean.css',
+// Import all theme CSS as raw strings — Vite ?raw gives us the file content
+import neutralTheme from './themes/neutral.css?raw';
+import darkTheme from './themes/dark.css?raw';
+import warmTheme from './themes/warm.css?raw';
+import gothicTheme from './themes/gothic.css?raw';
+import y2kTheme from './themes/y2k.css?raw';
+import stoneTheme from './themes/stone.css?raw';
+import oceanTheme from './themes/ocean.css?raw';
+
+const themes: Record<string, string> = {
+  neutral: neutralTheme,
+  dark: darkTheme,
+  warm: warmTheme,
+  gothic: gothicTheme,
+  y2k: y2kTheme,
+  stone: stoneTheme,
+  ocean: oceanTheme,
 };
 
 const themeStyleEl = document.createElement('style');
 themeStyleEl.id = 'gds-active-theme';
+themeStyleEl.textContent = neutralTheme;
 document.head.appendChild(themeStyleEl);
 
 let currentTheme = 'neutral';
 
-async function switchTheme(theme: string) {
+function switchTheme(theme: string) {
   if (theme === currentTheme) return;
-  const path = themePaths[theme];
-  if (!path) return;
-  try {
-    const res = await fetch(path);
-    const css = await res.text();
-    themeStyleEl.textContent = css;
-    currentTheme = theme;
-  } catch (e) {
-    console.error('Failed to load theme:', theme, e);
-  }
+  const css = themes[theme];
+  if (!css) return;
+  themeStyleEl.textContent = css;
+  currentTheme = theme;
   document.querySelectorAll('.theme-switcher button').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.theme === theme);
   });
