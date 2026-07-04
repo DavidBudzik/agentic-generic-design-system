@@ -51,41 +51,137 @@ document.head.appendChild(themeStyleEl);
 
 let currentTheme = 'neutral';
 
+// Theme metadata for the dropdown
+const themeMeta: { key: string; label: string; group: string; color: string }[] = [
+ { key: 'neutral', label: 'Neutral', group: 'Core', color: '#2563eb' },
+ { key: 'dark', label: 'Dark', group: 'Core', color: '#3b82f6' },
+ { key: 'warm', label: 'Warm', group: 'Core', color: '#b45309' },
+ { key: 'gothic', label: 'Gothic', group: 'Core', color: '#a855f7' },
+ { key: 'y2k', label: 'Y2K', group: 'Core', color: '#ec4899' },
+ { key: 'stone', label: 'Stone', group: 'Core', color: '#475569' },
+ { key: 'ocean', label: 'Ocean', group: 'Core', color: '#0369a1' },
+ { key: 'stripe', label: 'Stripe', group: 'Brand', color: '#533afd' },
+ { key: 'linearApp', label: 'Linear', group: 'Brand', color: '#5e6ad2' },
+ { key: 'vercel', label: 'Vercel', group: 'Brand', color: '#171717' },
+ { key: 'notion', label: 'Notion', group: 'Brand', color: '#2eaadc' },
+ { key: 'spotify', label: 'Spotify', group: 'Brand', color: '#1ed760' },
+ { key: 'claude', label: 'Claude', group: 'Brand', color: '#c96442' },
+ { key: 'nvidia', label: 'NVIDIA', group: 'Brand', color: '#76b900' },
+ { key: 'ferrari', label: 'Ferrari', group: 'Brand', color: '#DA291C' },
+ { key: 'apple', label: 'Apple', group: 'Brand', color: '#0071e3' },
+ { key: 'airbnb', label: 'Airbnb', group: 'Brand', color: '#ff385c' },
+ { key: 'supabase', label: 'Supabase', group: 'Brand', color: '#3ecf8e' },
+ { key: 'sentry', label: 'Sentry', group: 'Brand', color: '#6a5fc1' },
+];
+
 function switchTheme(theme: string) {
  if (theme === currentTheme) return;
  const css = themes[theme];
  if (!css) return;
  themeStyleEl.textContent = css;
  currentTheme = theme;
- document.querySelectorAll('.theme-switcher button').forEach(btn => {
-  btn.classList.toggle('active', btn.dataset.theme === theme);
+ // Update trigger button
+ const label = document.getElementById('theme-label');
+ const swatch = document.getElementById('theme-swatch');
+ const meta = themeMeta.find(m => m.key === theme);
+ if (label && meta) label.textContent = meta.label;
+ if (swatch && meta) swatch.style.background = meta.color;
+ // Update active state in dropdown
+ document.querySelectorAll('.theme-option').forEach(opt => {
+  opt.classList.toggle('active', opt.getAttribute('data-theme') === theme);
+ });
+ // Close dropdown
+ closeThemeMenu();
+}
+
+function buildThemeDropdown() {
+ const container = document.getElementById('theme-groups');
+ if (!container) return;
+ const groups: Record<string, typeof themeMeta> = {};
+ for (const t of themeMeta) {
+  if (!groups[t.group]) groups[t.group] = [];
+  groups[t.group].push(t);
+ }
+ let html = '';
+ for (const [group, items] of Object.entries(groups)) {
+  html += `<div class="theme-group"><div class="theme-group-label">${group}</div>`;
+  for (const item of items) {
+   html += `<div class="theme-option${item.key === currentTheme ? ' active' : ''}" data-theme="${item.key}" onclick="window.__switchTheme('${item.key}')">
+    <span class="theme-option-swatch" style="background: ${item.color}"></span>
+    <span class="theme-option-label">${item.label}</span>
+    ${item.key === currentTheme ? '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>' : ''}
+   </div>`;
+  }
+  html += '</div>';
+ }
+ container.innerHTML = html;
+}
+
+function toggleThemeMenu() {
+ const dropdown = document.getElementById('theme-dropdown');
+ const trigger = document.getElementById('theme-trigger');
+ if (!dropdown || !trigger) return;
+ const isOpen = dropdown.classList.contains('open');
+ if (isOpen) {
+  closeThemeMenu();
+ } else {
+  buildThemeDropdown();
+  dropdown.classList.add('open');
+  trigger.classList.add('open');
+  const search = document.getElementById('theme-search') as HTMLInputElement;
+  if (search) { search.value = ''; search.focus(); }
+ }
+}
+
+function closeThemeMenu() {
+ const dropdown = document.getElementById('theme-dropdown');
+ const trigger = document.getElementById('theme-trigger');
+ if (dropdown) dropdown.classList.remove('open');
+ if (trigger) trigger.classList.remove('open');
+}
+
+function filterThemes(query: string) {
+ const q = query.toLowerCase();
+ document.querySelectorAll('.theme-option').forEach(opt => {
+  const label = opt.getAttribute('data-theme') || '';
+  const text = (opt.textContent || '').toLowerCase();
+  const visible = !q || text.includes(q) || label.includes(q);
+  (opt as HTMLElement).style.display = visible ? '' : 'none';
+ });
+ // Hide empty group labels
+ document.querySelectorAll('.theme-group').forEach(group => {
+  const visible = group.querySelectorAll('.theme-option:not([style*="display: none"])').length > 0;
+  (group as HTMLElement).style.display = visible ? '' : 'none';
  });
 }
 
+// Close on outside click
+document.addEventListener('click', (e) => {
+ const switcher = document.querySelector('.theme-switcher');
+ if (switcher && !switcher.contains(e.target as Node)) closeThemeMenu();
+});
+
+// Close on Escape
+document.addEventListener('keydown', (e) => {
+ if (e.key === 'Escape') closeThemeMenu();
+});
+
 (window as any).__switchTheme = switchTheme;
+(window as any).__toggleThemeMenu = toggleThemeMenu;
+(window as any).__filterThemes = filterThemes;
 
 const app = document.getElementById('app')!;
 app.innerHTML = `
  <div class="theme-switcher">
-  <button data-theme="neutral" class="active" onclick="window.__switchTheme('neutral')">Neutral</button>
-  <button data-theme="dark" onclick="window.__switchTheme('dark')">Dark</button>
-  <button data-theme="warm" onclick="window.__switchTheme('warm')">Warm</button>
-  <button data-theme="gothic" onclick="window.__switchTheme('gothic')">Gothic</button>
-  <button data-theme="y2k" onclick="window.__switchTheme('y2k')">Y2K</button>
-  <button data-theme="stone" onclick="window.__switchTheme('stone')">Stone</button>
-  <button data-theme="ocean" onclick="window.__switchTheme('ocean')">Ocean</button>
-  <button data-theme="stripe" onclick="window.__switchTheme('stripe')">Stripe</button>
-  <button data-theme="linearApp" onclick="window.__switchTheme('linearApp')">Linear</button>
-  <button data-theme="vercel" onclick="window.__switchTheme('vercel')">Vercel</button>
-  <button data-theme="notion" onclick="window.__switchTheme('notion')">Notion</button>
-  <button data-theme="spotify" onclick="window.__switchTheme('spotify')">Spotify</button>
-  <button data-theme="claude" onclick="window.__switchTheme('claude')">Claude</button>
-  <button data-theme="nvidia" onclick="window.__switchTheme('nvidia')">NVIDIA</button>
-  <button data-theme="ferrari" onclick="window.__switchTheme('ferrari')">Ferrari</button>
-  <button data-theme="apple" onclick="window.__switchTheme('apple')">Apple</button>
-  <button data-theme="airbnb" onclick="window.__switchTheme('airbnb')">Airbnb</button>
-  <button data-theme="supabase" onclick="window.__switchTheme('supabase')">Supabase</button>
-  <button data-theme="sentry" onclick="window.__switchTheme('sentry')">Sentry</button>
+  <button class="theme-trigger" id="theme-trigger" onclick="window.__toggleThemeMenu()">
+   <span class="theme-swatch" id="theme-swatch"></span>
+   <span class="theme-label" id="theme-label">Neutral</span>
+   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="theme-chevron"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+  <div class="theme-dropdown" id="theme-dropdown">
+   <input type="text" class="theme-search" id="theme-search" placeholder="Search themes..." oninput="window.__filterThemes(this.value)" />
+   <div class="theme-groups" id="theme-groups"></div>
+  </div>
  </div>
 
  <div class="docs-layout">
